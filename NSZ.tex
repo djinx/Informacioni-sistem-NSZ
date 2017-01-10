@@ -1,10 +1,46 @@
 \documentclass[a4paper]{article}
 
+% srpski jezik, utf8
 \usepackage[serbian]{babel}
+\usepackage[utf8]{inputenc}
 
+% podrska za graficke elemente
+\usepackage{graphicx}
+
+% podrska za boje
+\usepackage{xcolor}
+
+% podrska za stavljanje hyperlink-ova u sadrzaj
+\usepackage{hyperref} 
+\hypersetup{
+	colorlinks   = true,
+	citecolor    = gray
+}
+
+% podesavanja fonta
+\newcommand{\thefont}{Myriad Pro}
+
+\usepackage{mathspec}
+\setmathsfont(Digits)[Numbers={Lining,Proportional}]{\thefont}
+\setmathsfont(Latin)[Numbers={Lining,Proportional}]{\thefont}
+\setmathsfont(Greek)[Numbers={Lining,Proportional}]{\thefont}
+\setmathrm{\thefont}
+
+\usepackage{polyglossia}
+\setmainlanguage[Script=Latin]{serbian}
+\setotherlanguage{english}
+\newfontfamily{\serbianfont}[Script=Latin, Language=Serbian]{\thefont}
+\newfontfamily{\serbianfonttt}{\thefont}
+\newfontfamily{\englishfont}[Language=English]{\thefont}
+\newfontfamily{\englishfonttt}{\thefont}
+
+% za [H] u figure
+\usepackage{float} 
+
+% informacije o tekstu
 \author{Ajzenhamer Nikola\\Bukurov Anja\\Vojislav Stankovi\'c}
-\title{Informacioni sistem Nacionalne slu\v zbe za zapo\v sljavanje}
-\date{\today.}
+\title{INFORMACIONI SISTEM NACIONALNE SLU\v ZBE ZA ZAPO\v SLJAVANJE}
+\date{\today}
 
 \begin{document}
 
