@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper, 12pt]{article}
 
 % srpski jezik, utf8
 \usepackage[serbian]{babel}
@@ -13,8 +13,9 @@
 % podrska za stavljanje hyperlink-ova u sadrzaj
 \usepackage{hyperref} 
 \hypersetup{
-	colorlinks   = true,
-	citecolor    = gray
+	colorlinks	= true,
+	citecolor	= gray,
+	linkcolor	= blue
 }
 
 % podesavanja fonta
@@ -45,5 +46,9 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
+\newpage
+
+\include{sekcije/uvod}
 
 \end{document}
