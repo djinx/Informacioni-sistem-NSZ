@@ -12,7 +12,7 @@
 \\ Postuslovi: NL je uspe\v sno prijavljen na evidenciju i izdat je evidencioni karton tra\v zioca zaposlenja.
 \\
 \\ Glavni tok:
-\\ NL prilazi automatu i bira opciju "Prijava na evidenciju", uzima broj i \v ceka svoj red. Kada do\dj e na red, prilazi \v salteru i zahteva od \v SS da ga prijavi na evidenciju. \v SS otvara formular za prijavu. \v SS tra\v zi od NL da mu preda li\v cnu kartu i dokaz o stru\v cnoj spremi. NL predaje potrebna dokumenta. \v SS popunjava formular na osnovu predatih dokumenata. Zatim, \v SS daje NL-u da popuni Obrazac za prijavu na evidenciju. NL vra\v ca popunjen obrazac. \v SS popunjava Evidencioni karton za tra\v zioca zaposlenja. Zatim zakazuje prvo javljanje savetniku za zapo\v sljavanje. \v SS vra\v ca dokumenta NL-u i daje mu evidentacioni karton. Prelazi se na slu\v caj upotrebe \ref{su: prvo javljanje savetniku}.
+\\ NL prilazi automatu i bira opciju "Prijava na evidenciju", uzima broj i \v ceka svoj red. Kada do\dj e na red, prilazi \v salteru i zahteva od \v SS da ga prijavi na evidenciju. \v SS otvara formular za prijavu. \v SS tra\v zi od NL da mu preda li\v cnu kartu i dokaz o stru\v cnoj spremi. NL predaje potrebna dokumenta. \v SS popunjava formular na osnovu predatih dokumenata. Zatim, \v SS daje NL-u da popuni Obrazac za prijavu na evidenciju. NL vra\v ca popunjen obrazac. \v SS popunjava Evidencioni karton za tra\v zioca zaposlenja. Zatim zakazuje prvo javljanje savetniku za zapo\v sljavanje, i postavlja status NL-a na ''aktivan''. \v SS vra\v ca dokumenta NL-u i daje mu evidentacioni karton. Prelazi se na slu\v caj upotrebe \ref{su: prvo javljanje savetniku}.
 \\
 \\ Alternativni tok: 
 \\ Ukoliko se u bilo kom trenutku dogodi pad sistema, \v SS ponovo pokre\'ce sistem, loguje se i popunjava formular ukoliko je sistem pao pre ispe\v snog \v cuvanja.
@@ -31,4 +31,4 @@
 \\ NL dolazi kod SZ-a u kancelariju i predaje mu svoj evidentacioni karton. SZ pronalazi NL-a u sistemu. SZ i NL razgovaraju o NL-ovoj stru\v cnoj spremi i kakvi poslovi ga zanimaju. SZ unosi nove informacije u sistem. Zatim, razgovaraju o ve\v stinama NL-a i SZ unosi nove informacije. SZ tra\v zi informacije o prethodnim zaposlenjima NL-a, ako postoje i te informacije unosi u sistem. Na kraju, SZ zakazuje slede\' ce javljanje i vra\' ca NL-u evidentacioni karton.
 \\
 \\ Alternativni tok:
-\\ Ukoliko NL ne do\dj e pre zakazanog termina, \v salje se zahtev A za brisanjem podataka o NL-u iz sistema. Prelazi se na slu\v caj upotrebe \ref{su: brisanje korisnika}.
+\\ Ukoliko NL ne do\dj e pre zakazanog termina, automatski se \v salje zahtev za izmenom podataka o NL-u u sistemu, i to: status NL-a se prebacuje na ''zamrznut'', i traje 6 meseci, nakon \v cega se ponovo vra\' ca na status ''aktivan''.
