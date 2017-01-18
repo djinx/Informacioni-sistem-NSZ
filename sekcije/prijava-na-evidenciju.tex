@@ -9,7 +9,7 @@
 \\
 \\ Preduslovi: NL ima li\v cnu kartu i dokaz o stru\v cnoj spremi. Automat za izdavanje broja je u funkciji. \v SS je ulogovan na sistem. 
 \\
-\\ Postuslovi: NL je uspe\v sno prijavljen na evidenciju i izdat je evidencioni karton tra\v zioca zaposlenja.
+\\ Postuslovi: NL je ili uspe\v sno prijavljen na evidenciju i izdat je evidencioni karton tra\v zioca zaposlenja, ili mu je ukazano na njegov status.
 \\
 \\ Glavni tok:
 \begin{enumerate}
@@ -46,14 +46,24 @@
 \subsubsection{Slu\v caj upotrebe: Prvo javljanje savetniku}
 \label{su: prvo javljanje savetniku}
 
-\noindent U\v cesnici: Nezaposleno lice (u daljem tekstu NL), savetnik za zapo\v sljavanje (SZ), Administrator sistema (u daljem tekstu A)
+\noindent U\v cesnici: Nezaposleno lice (u daljem tekstu NL), savetnik za zapo\v sljavanje (SZ)
 \\
 \\ Preduslovi: NL ima evidentacioni karton. SZ je ulogovan na sistem. 
 \\
-\\ Postuslovi: Uspe\v sno je zabele\v zeno javljanje.
+\\ Postuslovi: Ili je uspe\v sno zabele\v zeno javljanje NL-a ili je postavljen status NL-a na ''zamrznut''.
 \\ 
 \\ Glavni tok:
-\\ NL dolazi kod SZ-a u kancelariju i predaje mu svoj evidentacioni karton. SZ pronalazi NL-a u sistemu. SZ i NL razgovaraju o NL-ovoj stru\v cnoj spremi i kakvi poslovi ga zanimaju. SZ unosi nove informacije u sistem. Zatim, razgovaraju o ve\v stinama NL-a i SZ unosi nove informacije. SZ tra\v zi informacije o prethodnim zaposlenjima NL-a, ako postoje i te informacije unosi u sistem. Na kraju, SZ zakazuje slede\' ce javljanje i vra\' ca NL-u evidentacioni karton.
-\\
-\\ Alternativni tok:
-\\ Ukoliko NL ne do\dj e pre zakazanog termina, automatski se \v salje zahtev za izmenom podataka o NL-u u sistemu, i to: status NL-a se prebacuje na ''zamrznut'', i traje 6 meseci, nakon \v cega se ponovo vra\' ca na status ''aktivan''.
+\begin{enumerate}
+	\item NL dolazi kod SZ-a u kancelariju i predaje mu svoj evidentacioni karton.
+	\item SZ pronalazi NL-a u sistemu.
+	\item SZ i NL razgovaraju o NL-ovoj stru\v cnoj spremi, kakvi poslovi zanimaju NL-e, i koje ve\v stine Nl poseduje.
+	\item SZ unosi nove informacije u sistem.
+	\item SZ tra\v zi informacije o prethodnim zaposlenjima NL-a, i ako postoje i te informacije, SZ ih unosi u sistem.
+	\item SZ zakazuje slede\' ce javljanje i vra\' ca NL-u evidentacioni karton.
+\end{enumerate}
+
+\noindent Alternativni tok:
+\begin{description}
+	\item[A1. Promena statusa NL-a na ''zamrznut''] ~\\
+	Ukoliko u koraku 1 Glavnog toka NL ne do\dj e na prvo javljanje pre zakazanog termina, automatski se \v salje zahtev za izmenom podataka o NL-u u sistemu, i to: status NL-a se prebacuje na ''zamrznut'', i traje 6 meseci, nakon \v cega se ponovo vra\' ca na status ''aktivan''. Slu\v caj upotrebe se zavr\v sava.
+\end{description}
