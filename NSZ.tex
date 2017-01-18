@@ -35,17 +35,53 @@
 \newfontfamily{\englishfont}[Language=English]{\thefont}
 \newfontfamily{\englishfonttt}{\thefont}
 
+% promena standardnih imena:
+%     Bibliografija -> Literatura
+\renewcommand{\refname}{Literatura}
+
 % za [H] u figure
 \usepackage{float} 
 
-% informacije o tekstu
+% za vertikalno spajanje celija u tabeli
+\usepackage{multirow}
+
+% meta-informacije o tekstu
 \author{Ajzenhamer Nikola 1083/2016\\Bukurov Anja 1082/2016\\Vojislav Stankovi\'c 1080/2016}
 \title{INFORMACIONI SISTEM NACIONALNE SLU\v ZBE ZA ZAPO\v SLJAVANJE}
 \date{\today}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+	\centering
+	\noindent{\Large Matemati\v cki fakultet\\Univerzitet u Beogradu}
+	
+	\vspace{0.3\textheight}
+	
+	{\Huge INFORMACIONI SISTEM\\NACIONALNE SLU\v ZBE ZA ZAPO\v SLJAVANJE}
+	
+	\vfill
+	
+	{
+		\Large 
+		\begin{tabular}{|l|l|l|}
+			\hline
+			\multirow{3}{*}{Studenti} & Ajzenhamer Nikola     & 1083/2016\\ \cline{2-3}
+			                          & Bukurov Anja          & 1082/2016\\ \cline{2-3}
+			                          & Stankovi\' c Vojislav & 1080/2016\\
+			\hline
+			Predmet                   & \multicolumn{2}{l|}{Informacioni sistemi}\\
+			\hline
+			\v Skolska godina         & \multicolumn{2}{l|}{2016/2017}\\
+			\hline
+			Nastavnik                 & \multicolumn{2}{l|}{dr Sa\v sa Malkov}\\
+			\hline
+			Datum                     & \multicolumn{2}{l|}{\today}\\
+			\hline
+		\end{tabular}
+	}
+\end{titlepage}
+\newpage
 \tableofcontents
 \newpage
 
@@ -57,6 +93,7 @@
 \include{sekcije/novcana-naknada}
 \include{sekcije/administracija-sistema}
 
+\thispagestyle{empty}
 \begin{thebibliography}{9}
 	
 	\bibitem{smalkov-slajdovi}
@@ -64,5 +101,6 @@
 	\href{http://poincare.matf.bg.ac.rs/~smalkov/nastava.master.html\#r271\_is}{\textit{Slajdovi sa predavanja na kursu Informacioni sistemi}}.
 	
 \end{thebibliography}
+\addcontentsline{toc}{section}{Literatura}
 
 \end{document}
