@@ -12,11 +12,36 @@
 \\ Postuslovi: NL je uspe\v sno prijavljen na evidenciju i izdat je evidencioni karton tra\v zioca zaposlenja.
 \\
 \\ Glavni tok:
-\\ NL prilazi automatu i bira opciju "Prijava na evidenciju", uzima broj i \v ceka svoj red. Kada do\dj e na red, prilazi \v salteru i zahteva od \v SS da ga prijavi na evidenciju. \v SS otvara formular za prijavu. \v SS tra\v zi od NL da mu preda li\v cnu kartu i dokaz o stru\v cnoj spremi. NL predaje potrebna dokumenta. \v SS popunjava formular na osnovu predatih dokumenata. Zatim, \v SS daje NL-u da popuni Obrazac za prijavu na evidenciju. NL vra\v ca popunjen obrazac. \v SS popunjava Evidencioni karton za tra\v zioca zaposlenja. Zatim zakazuje prvo javljanje savetniku za zapo\v sljavanje, i postavlja status NL-a na ''aktivan''. \v SS vra\v ca dokumenta NL-u i daje mu evidentacioni karton. Prelazi se na slu\v caj upotrebe \ref{su: prvo javljanje savetniku}.
-\\
-\\ Alternativni tok: 
-\\ Ukoliko se u bilo kom trenutku dogodi pad sistema, \v SS ponovo pokre\'ce sistem, loguje se i popunjava formular ukoliko je sistem pao pre ispe\v snog \v cuvanja.
+\begin{enumerate}
+	\item NL prilazi automatu i bira opciju ''Prijava na evidenciju''.
+	\item Automat bele\v zi da je opcija ''Prijava na evidenciju'' odabrana, ra\v cuna naredni broj u redu \v cekanja za tu opciju, i \v stampa papir sa brojem.
+	\item NL uzima broj i \v ceka svoj red.
+	\item Kada do\dj e na red, NL prilazi \v salteru i zahteva od \v SS da ga prijavi na evidenciju.
+	\item \v SS otvara formular za prijavu.
+	\item \v SS tra\v zi od NL da mu preda li\v cnu kartu i dokaz o stru\v cnoj spremi.
+	\item NL predaje potrebna dokumenta. 
+	\item \v SS popunjava formular na osnovu predatih dokumenata.
+	\item \v SS daje NL-u da popuni Obrazac za prijavu na evidenciju.
+	\item NL popunjava Obrazac za prijavu na evidenciju, a zatim ga vra\v ca SS-u.
+	\item \v SS popunjava Evidencioni karton za tra\v zioca zaposlenja.
+	\item \v SS zakazuje prvo javljanje savetniku za zapo\v sljavanje, i postavlja status NL-a na ''aktivan''.
+	\item \v SS vra\v ca dokumenta NL-u i daje mu evidentacioni karton.
+	\item Prelazi se na slu\v caj upotrebe \ref{su: prvo javljanje savetniku}.
+\end{enumerate}
 
+\noindent Alternativni tokovi: 
+\begin{description}
+	\item[A1. Pad sistema] ~\\
+	Ukoliko se u bilo kom koraku Glavnog toka dogodi pad sistema, \v SS ponovo pokre\'ce sistem i prijavljuje se na njega.
+	\begin{enumerate}
+		\item \v SS proverava da li je formular sa\v cuvan.
+		\item Ukoliko jeste, prelazi se na korak 9 Glavnog toka.
+		\item Ina\v ce, prelazi se na korak 8 Glavnog toka.
+	\end{enumerate}
+
+	\item[A2. Status NL-a je ''zamrznut''] ~\\
+	Ukoliko u koraku 8 Glavnog toka sistem prika\v ze da postoje informacije o NL-u, kao i da je njegov status ''zamrznut'', \v SS obave\v stava NL-a o njegovom statusu, i slu\v caj upotrebe se zavr\v sava.
+\end{description}
 
 \subsubsection{Slu\v caj upotrebe: Prvo javljanje savetniku}
 \label{su: prvo javljanje savetniku}
