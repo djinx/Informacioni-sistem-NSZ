@@ -45,6 +45,11 @@
 % za vertikalno spajanje celija u tabeli
 \usepackage{multirow}
 
+% za redefinisanje izgleda numerisanih listi
+\renewcommand{\labelenumii}{\theenumii.}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
+\renewcommand{\theenumiii}{\theenumii.\arabic{enumiii}}
+
 % meta-informacije o tekstu
 \author{Ajzenhamer Nikola 1083/2016\\Bukurov Anja 1082/2016\\Vojislav Stankovi\'c 1080/2016}
 \title{INFORMACIONI SISTEM NACIONALNE SLU\v ZBE ZA ZAPO\v SLJAVANJE}
@@ -87,6 +92,7 @@
 
 \include{sekcije/uvod}
 \include{sekcije/prijava-na-evidenciju}
+\include{sekcije/onlajn-sistem}
 \include{sekcije/javljanje}
 \include{sekcije/mere-aktivnog-trazenja-posla}
 \include{sekcije/posredovanje-u-zaposljavanju}
