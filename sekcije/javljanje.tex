@@ -88,3 +88,36 @@ Unapre\dj enje trenutnog re\v senja predstavlja Javljanje putem interneta. Ovim 
 \subsubsection{Javljanje kod savetnika}
 \label{su: javljanje kod savetnika}
 
+\noindent U\v cesnici: Nezaposleno lice (u daljem tekstu NL), savetnik za zapo\v sljavanje (SZ)
+\\
+\\ Preduslovi: NL ima evidentacioni karton. SZ je ulogovan na sistem. 
+\\
+\\ Postuslovi: Ili su podaci o NL-u izmenjeni ili su podaci ostali nepromenjeni ili je NL obave\v sten o svom stanju.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item NL dolazi kod SZ u kancelariju i predaje mu svoj evidentacioni karton.
+	\item SZ pronalazi NL u sistemu.
+	\item SZ i NL razgovaraju o ve\v stinama koje je NL stekao od poslednjeg javljanja.
+	\item SZ unosi nove informacije u sistem.
+	\item SZ tra\v zi informacije o poslovima koje mogu da zanimaju NL.
+	\item Sistem ispisuje informacije o takvim poslovima. 
+	\item SZ nudi teku\' ci posao NL.
+	\item SZ i NL razgovaraju o teku\' cem poslu.
+	\item SZ nudi NL da zaka\v ze razgovor za posao.
+	\begin{enumerate}
+		\item NL bira da ugovori razgovor za posao.
+		\begin{enumerate}
+			\item SZ unosi potrebne podatke u sistem.
+			\item Sistem, zajedno sa informacionim sistemom kompanije, zakazuje razgovor za posao, a zatim isporu\v cuje informacije SZ.
+			\item SZ obave\v stava NL o isporu\v cenim informacijama.
+			\item Prelazi se na korak ?.
+		\end{enumerate}
+		\item NL bira da ne ugovori razgovor za posao, pa se prelazi na korak ?.
+	\end{enumerate}
+	\item Koraci ? i ? se ponavljaju sve dok ima poslova u ponudi.
+	\item SZ vra\' ca evidentacioni karton NL.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\\/
