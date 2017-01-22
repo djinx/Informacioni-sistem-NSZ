@@ -52,5 +52,39 @@ Unapre\dj enje trenutnog re\v senja predstavlja Javljanje putem interneta. Ovim 
 \subsubsection{Javljanje putem interneta}
 \label{su: javljanje putem interneta}
 
+\noindent U\v cesnici: Nezaposleno lice (u daljem tekstu NL)
+\\
+\\ Preduslovi: NL ima otvoren nalog u onlajn sistemu.
+\\
+\\ Postuslovi: Ili je uspe\v sno zabele\v zeno javljanje NL-a ili je NL obave\v sten o svom stanju.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item NL pristupa onlajn sistemu Nacionalne slu\v zbe.
+	\item Sistem prikazuje formular za prijavljivanje na sistem.
+	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
+	\begin{enumerate}
+		\item U slu\v caju uspe\v snog prijavljivanja na sistem, sistem prikazuje po\v cetni interfejs NL-u, i prelazi se na korak 4.
+		\item Ina\v ce, sistem prikazuje poruku NL-u i slu\v caj upotrebe se zavr\v sava.
+	\end{enumerate}
+	\item NL bira opciju ``Redovno javljanje''.
+	\item NL bira da li \v zeli da zaka\v ze sastanak sa savetnikom za zapo\v sljavanje ili ne.
+	\begin{enumerate}
+		\item Ukoliko NL odabere da zaka\v ze sastanak, sistem pronalazi savetnika za zapo\v sljavanje koji je zadu\v zen za NL.
+		\begin{enumerate}
+			\item Sistem zakazuje prvi slobodni termin za sastanak.
+			\item Sistem prikazuje NL-u zakazani termin.
+			\item NL potvr\dj uje izbor, i prelazi se na korak 6.
+		\end{enumerate}
+		\item Ina\v ce, prelazi se na korak 6.
+	\end{enumerate}
+	\item Sistem bele\v zi da je NL uspe\v sno obavio proceduru.
+	\item Sistem bele\v zi da \v salterski slu\v zbenik treba da upi\v se datume i stavi potpis u evidencioni karton NL-a kada NL slede\'ci put do\dj e u Nacionalnu slu\v zbu.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\\/
+
 \subsubsection{Javljanje kod savetnika}
 \label{su: javljanje kod savetnika}
+
