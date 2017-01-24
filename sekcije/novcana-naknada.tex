@@ -1,16 +1,115 @@
 \subsection{Nov\v cana naknada}
 
+
+
 \subsubsection{Prijava za nov\v canu naknadu}
-- provera da li \v covek ima pravo  na istu
 
-\subsubsection{Utvr\dj ivanje visine nov\v cane naknade}
+\noindent Učesnici: Nezaposleno lice (u daljem tekstu NL), šalterski službenik (u daljem tekstu ŠS)
+\\
+\\ Preduslovi: NL ima ličnu kartu.
+\\
+\\ Postuslovi: prijava je popunjena i prosleđena upravnom referentu
+\\
+\\ Glavni tok:
+\begin{enumerate}
+\item NL prilazi automatu i bira opciju ''Prijava za novčanu naknadu''.
+\item Automat bele\v zi da je opcija ''Prijava za novčanu naknadu'' odabrana, ra\v cuna naredni broj u redu \v cekanja za tu opciju, i \v stampa papir sa brojem.
+\item NL uzima broj i \v ceka svoj red.
+	\item Kada do\dj e na red, NL prilazi \v salteru i zahteva od \v SS da ga prijavi za novčanu naknadu.
+	\item \v SS otvara formular za prijavu.
+	\item \v SS tra\v zi od NL da mu preda li\v cnu kartu.
+	\item NL predaje li\v cnu kartu.
+    \item \v SS pronalazi NL u sistemu.
+	\item \v SS daje NL-u da popuni Zahtev za ostvarivanje prava na novčanu naknadu.
+	\item NL popunjava Zahtev za ostvarivanje prava na novčanu naknadu, a zatim ga vra\v ca SS-u.
+	\item \v SS vra\v ca ličnu kartu NL-u i upućuje ga kod upravnog referenta.
+	\item Prelazi se na slu\v caj upotrebe \ref{su: prvo javljanje savetniku}.
+\end{enumerate}
 
-\subsubsection{Isplata}
-- svaka isplata se bele\v zi u bazi
+\begin{description}
+	\item[A1. Nezaposleno lice nije prijavljeno na evidenciju] ~\\
+	Ukoliko u koraku 8. Glavnog toka ŠS ne može da nađe NL u sistemu, zaključuje da NL nije prijavljeno na evidenciju tržišta rada i prelazi se na slučaj upotrebe \ref{su: prijava}.
+\end{description}
 
-- mislim da bi mogao jos neki slucaj upotrebe da se ovde doda
-  nesto sto bi ukljucivalo tu prijavu da seta od kancelarije do kancelarije
-  pa da za nju imamo dijagram stanja
-  za sad ide samo od pulta do nekoga ko je zaduzen za procenu novcane naknade
-  mozda bi moglo da se doda da ide do nekog sefa ili tako nesto koji mora to da odobri
-  (verovatno jeste tako samo ja ne znam kako funkcionisu drzavne ustanove)
+\subsubsection{Kompletiranje dokumentacije}
+\label{su: kompletiranje dokumentacije}
+
+\noindent Učesnici: Nezaposleno lice (u daljem tekstu NL), upravni referent (u daljem tekstu UR).
+\\
+\\ Preduslovi: NL je popunio Zahtev za ostvarivanje prava na novčanu naknadu.
+\\
+\\ Postuslovi: UR je kompletirao dokumentaciju i prosledio je pravnom licu.
+\\
+\\ Glavni tok:
+\begin{enumerate}
+\item NL dolazi kod UR-a u kancelariju i predaje mu Zahtev za ostvarivanje prava na novčanu naknadu.
+\item UR pronalazi NL u sistemu i dopunjava zahtev podacima iz evidencije.
+\item UR traži od NL-a da mu preda potrebnu dokumentaciju.
+\item NL-e predaje UR-u potrebnu dokumentaciju.
+\item UR preuzima dokumentaciju i zahtev i šalje pravnom licu na tumačenje.
+\item Prelazi se na slu\v caj upotrebe \ref{su: resenje}.
+\end{enumerate}
+
+\subsubsection{Donošenje rešenja o novčanoj naknadi}
+\label{su: resenje}
+
+\noindent Učesnici: Pravno lice.
+\\
+\\ Preduslovi: Upravni referent je predao Zahtev za ostvarivanje prava na novčanu naknadu i potrebnu dokumentaciju nezaposlenog lica pravnom licu.
+\\
+\\ Postuslovi: Nezaposleno lice je ili dobilo pravo na novčanu naknadu ili je odbijeno.
+\\
+\\ Glavni tok:
+\begin{enumerate}
+\item Pravno lice prima Zahtev za ostvarivanje prava na novčanu naknadu i potrebnu dokumentaciju.
+\item Pravno lice proverava da li je sve ispravno popunjeno.
+\item \begin{enumerate}
+\item Pravno lice tumači zakon i na osnovu zakona i potrebne dokumentacije odobrava novčanu naknadu nezaposlenom licu.
+\item Pravno lice tumači zakon i na osnovu zakona i potrebne dokumentacije ne odobrava novčanu naknadu nezaposlenom licu.
+\end{enumerate}
+\item Pravno lice prosleđuje rešenje o novčanoj naknadi direktoru na overu.
+\item Prelazi se na slu\v caj upotrebe \ref{su: gde je pecat}.
+\end{enumerate}
+
+\begin{description}
+\item [A1. Nezaposleno lice nije predalo svu potrebnu dokumentaciju] ~\\
+	U koliko u koraku 2. Glavnog toka primeti da fali neophodna dokumentacija pismenim putem obaveštava nezaposleno lice da donese upravnom referentu nedostajuću dokumentaciju. Prelazi se na slučaj upotrebe \ref{su: kompletiranje dokumentacije}.
+\end{description}
+
+
+\subsubsection{Zaključivanje rešenja}
+\label{su: gde je pecat}
+
+\noindent Učesnici: direktor.
+\\
+\\ Preduslovi: pravno lice je donelo rešenje o novčanoj naknadi i predalo ga direktoru.
+\\
+\\ Postuslovi: rešenje o novčanoj naknadi je overeno.
+\\
+\\ Glavni tok:
+\begin{enumerate}
+\item Direktor preuzima rešenje o novčanoj naknadi.
+\item Direktor analizira rešenje o novčanoj naknadi.
+\item Direktor overava rešenje o novčanoj naknadi i prosleđuje ga pisarnici.
+\item Prelazi se na slu\v caj upotrebe \ref{su: pisarnica}.
+\end{enumerate}
+
+
+\subsubsection{Slanje rešenja o novčanoj naknadi nezaposlenom licu}
+\label{su: pisarnica}
+
+\noindent Učesnici: referent prijema i ekspedicije pošte (u daljem tekstu RPEP).
+\\
+\\ Preduslovi: direktor je overio rešenje o novčanoj naknadi i prosledio ga pisarnici.
+\\
+\\ Postuslovi: rešenje o novčanoj naknadi je poslato nezaposlenom licu.
+\\
+\\ Glavni tok:
+\begin{enumerate}
+\item RPEP preuzima overeno rešenje o novčanoj naknadi.
+\item RPEP pakuje rešenje u kovertu.
+\item RPEP čita adresu nezaposlenog lica iz sistema.
+\item RPEP šalje overeno rešenje o novčanoj naknadi na pročitanu adresu.
+\end{enumerate}
+
+
