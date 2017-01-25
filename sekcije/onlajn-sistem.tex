@@ -16,6 +16,52 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \subsubsection{Pravljenje naloga}
 \label{su: pravljenje naloga}
 
+\noindent U\v cesnici: Eksterni korisnik (u daljem tekstu EK)
+\\
+\\ Preduslovi: Ako je tip EK ''Nezaposleno lice'', onda EK ima evidentacioni karton.
+\\
+\\ Postuslovi: Ili je EK uspe\v sno napravio nalog ili je stanje ostalo nepromenjeno.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item EK pristupa onlajn sistemu Nacionalne slu\v zbe.
+	\item Sistem prikazuje po\v cetnu stranu \ref{}.
+	\item EK bira opciju ''Registracija novog korisnika''.
+	\item Sistem prikazuje formular \ref{}.
+	\item EK popunjava formular.
+	\item EK bira opciju ''Sa\v cuvaj i nastavi''.
+	\item Sistem, na osnovu unetih podataka, proverava da li ve\'c postoji takav korisnik.
+	\item Sistem ustanovljava da postoji takav korisnik.
+	\begin{enumerate}
+		\item Sistem prikazuje poruku sa obave\v stenjem i nudi EK opciju da promeni \v lozinku (ukoliko ju je zaboravio).
+		\item EK bira da li \v zeli da promeni lozinku.
+		\item EK bira da promeni lozinku.
+		\begin{enumerate}
+			\item Sistem tra\v zi od EK da unese email adresu.
+			\item NK unosi email adresu i potvr\dj uje unos.
+			\item Sistem obave\v stava EK da mu je poslata nova lozinka na email adresu.
+			\item Slu\v caj upotrebe se zavr\v sava.
+		\end{enumerate}
+		\item EK bira da ne promeni lozinku, pa se prelazi na korak 2.
+	\end{enumerate}
+	\item Sistem ustanovljava da ne postoji takav korisnik, pa se prelazi na korak 10.
+	\item Sistem utvr\dj uje tip EK.
+	\item Sistem je utvrdio da je tip EK ''Nezaposleno lice'', pa se prelazi na korak 13.
+	\item Sistem je utvrdio da je tip EK ''Kompanija''.
+	\begin{enumerate}
+		\item Prelazi se na slu\v caj upotrebe \ref{su: pravljenje naloga za kompanije}.
+	\end{enumerate}
+	\item Sistem otvara novi nalog sa unetim podacima, a zatim \v salje poruku na unetu email adresu za potvr\dj ivanje.
+	\item Sistem obave\v stava EK da je nalog uspe\v sno otvoren i da treba da potvrdi otvaranje naloga na email-u.
+	\item Kada EK potvrdi otvaranje naloga na email-u, sistem mu prikazuje obave\v stenje da je otvaranje naloga kompletirano.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\begin{description}
+	\item[A1. Nedostupnost sistema] ~\\
+	Ukoliko u bilo kom od koraka 1--4 Glavnog toka, ne do\dj e do prikaza korisni\v ckog interfejsa (na primer, zbog sporog interneta), EK mo\v ze da sa\v ceka, pa da poku\v sa ponovo, ili da odustane od pravljenja naloga.
+\end{description}
+
 \subsubsection{Pravljenje naloga za kompanije}
 \label{su: pravljenje naloga za kompanije}
 
