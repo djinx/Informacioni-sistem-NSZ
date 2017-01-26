@@ -8,7 +8,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 
 \begin{figure}[H]
 	\centering
-	
+	\includegraphics[width=\textwidth]{dijagrami/dijagrami-slucajeva-upotrebe/onlajn-sistem.png}
 	\caption{Dijagram slu\v cajeva upotrebe procesa ''Kori\v s\' cenje onlajn sistema Nacionalne slu\v zbe''.}
 	\label{dsu: koriscenje onlajn sistema nacionalne sluzbe}
 \end{figure}
@@ -50,6 +50,8 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\item Sistem je utvrdio da je tip EK ''Kompanija''.
 	\begin{enumerate}
 		\item Prelazi se na slu\v caj upotrebe \ref{su: odobrenje naloga za kompanije}.
+		\item Po zavr\v setku slu\v caja upotrebe, sistem obave\v stava EK da \' ce mu odgovor sti\' ci na email.
+		\item Slu\v caj upotrebe se zavr\v sava.
 	\end{enumerate}
 	\item Sistem otvara novi nalog sa unetim podacima, a zatim \v salje poruku na unetu email adresu za potvr\dj ivanje.
 	\item Sistem obave\v stava EK da je nalog uspe\v sno otvoren i da treba da potvrdi otvaranje naloga na email-u.
@@ -67,6 +69,50 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 
 \subsubsection{Odobrenje naloga za kompanije}
 \label{su: odobrenje naloga za kompanije}
+
+\noindent U\v cesnici: Kompanija (u daljem tekstu K), Savetnik za poslodavce (u daljem tekstu SP)
+\\
+\\ Preduslovi: SP ima pristup sistemu i autorizovan je. K ima li\v cnu kartu. Ukoliko je slu\v caj upotrebe pokrenut iz slu\v caja upotrebe ''Pravljenje naloga'', onda su dostupne informacije iz formulara koji se popunjava u tom slu\v caju upotrebe (formular \ref{}).
+\\
+\\ Postuslovi: Ili je K uspe\v sno odobreno pravljenje naloga ili je zabele\v zen poziv za saradnju ili je stanje ostalo nepromenjeno i izdata je poruka o gre\v sci.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item Sistem proverava da li je ostvarena saradnja izme\dj u K i Nacionalne slu\v zbe.
+	\item Sistem je ustanovio da je ostvarena saradnja, pa se prelazi na korak 4.
+	\item Sistem je ustanovio da nije ostvarena saradnja.
+	\begin{enumerate}
+		\item Sistem nudi K opciju da podnese zahtev za saradnju.
+		\item K bira da podnese zahtev za saradnju.
+		\begin{enumerate}
+			\item Sistem tra\v zi od K da unese broj li\v cne karte.
+			\item K unosi broj li\v cne karte.
+			\item Sistem automatski pronalazi SP koji \' ce biti zadu\v zen za K.
+			\item Sistem bele\v zi novog poslodavca (na osnovu podataka iz formulara) i zadu\v zuje prona\dj enog SP za K.
+			\item Prelazi se na korak 4.
+		\end{enumerate}
+		\item K bira da ne podnese zahtev sa saradnju, pa se slu\v caj upotrebe zavr\v sava. Ukoliko je slu\v caj upotrebe pokrenut iz slu\v caja upotrebe ''Pravljenje naloga'', onda se i taj slu\v caj upotrebe zavr\v sava.
+	\end{enumerate}
+	\item Sistem pronalazi SP koji je zadu\v zen za K.
+	\item Sistem \v salje novi zahtev SP za autorizacijom novog naloga.
+	\item SP proverava da li je zahtev u skladu sa protokolom.
+	\item SP ustanovljava da zahtev jeste u skladu sa protokolom.
+	\begin{enumerate}
+		\item SP autorizuje zahtev.
+		\item Prelazi se na korak 9.
+	\end{enumerate}
+	\item SP ustanovljava da zahtev nije u skladu sa protokolom.
+	\begin{enumerate}
+		\item SP odbija zahtev, i popunjava polje sa obrazlo\v zenjem.
+		\item Sistem generi\v se poruku koja se \v salje na unetu email adresu, a koja uklju\v cuje obave\v stenje da je zahtev odbijen i obrazlo\v zenje.
+		\item Slu\v caj upotrebe se zavr\v sava.
+	\end{enumerate}
+	\item Sistem otvara novi nalog sa unetim podacima, a zatim \v salje poruku na unetu email adresu za potvr\dj ivanje.
+	\item Kada K potvrdi otvaranje naloga na email-u, sistem joj prikazuje obave\v stenje da je otvaranje naloga kompletirano.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\\/
 
 \subsubsection{Prijavljivanje na sistem}
 \label{su: prijavljivanje na sistem}
