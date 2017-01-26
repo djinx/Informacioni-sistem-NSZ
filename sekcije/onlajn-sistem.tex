@@ -18,7 +18,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 
 \noindent U\v cesnici: Eksterni korisnik (u daljem tekstu EK)
 \\
-\\ Preduslovi: Ako je tip EK ''Nezaposleno lice'', onda EK ima evidentacioni karton. Ako je tip EK ''Kompanija'', onda je uspostavljena saradnja izme\dj u EK i Nacionalne slu\v zbe.
+\\ Preduslovi: Ako je tip EK ''Nezaposleno lice'', onda EK ima evidentacioni karton.
 \\
 \\ Postuslovi: Ili je EK uspe\v sno napravio nalog ili je stanje ostalo nepromenjeno.
 \\ 
@@ -27,7 +27,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\item EK pristupa onlajn sistemu Nacionalne slu\v zbe.
 	\item Sistem prikazuje po\v cetnu stranu \ref{}.
 	\item EK bira opciju ''Registracija novog korisnika''.
-	\item Sistem prikazuje formular \ref{}.
+	\item U zavisnosti od tipa EK, Sistem prikazuje odgovaraju\' ci formular.
 	\item EK popunjava formular.
 	\item EK bira opciju ''Sa\v cuvaj i nastavi''.
 	\item Sistem, na osnovu unetih podataka, proverava da li ve\'c postoji takav korisnik.
@@ -59,7 +59,10 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \noindent Alternativni tokovi: 
 \begin{description}
 	\item[A1. Nedostupnost sistema] ~\\
-	Ukoliko u bilo kom od koraka 1--4 Glavnog toka, ne do\dj e do prikaza korisni\v ckog interfejsa (na primer, zbog sporog interneta), EK mo\v ze da sa\v ceka, pa da poku\v sa ponovo, ili da odustane od pravljenja naloga.
+	Ukoliko u bilo kom od koraka 1--4 Glavnog toka ne do\dj e do prikaza korisni\v ckog interfejsa (na primer, zbog sporog interneta), EK mo\v ze da sa\v ceka, pa da poku\v sa ponovo, ili da odustane od pravljenja naloga.
+	
+	\item[A2. Neispravnost unetih podataka] ~\\
+	Ukoliko u koraku 6 Glavnog toka sistem utvrdi da neki podatak nije validan ili neko obavezno polje nije popunjeno, sistem generi\v se poruku o gre\v sci i zahteva od EK da ispravno popuni formu. Izvr\v savanje se nastavlja u koraku 5 Glavnog toka.
 \end{description}
 
 \subsubsection{Odobrenje naloga za kompanije}
