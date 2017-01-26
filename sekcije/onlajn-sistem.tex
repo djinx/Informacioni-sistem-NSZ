@@ -4,7 +4,7 @@ Onlajn sistem Nacionalne slu\v zbe je veb aplikacija koja omogu\' cava obavljanj
 
 Onlajn sistem prepoznaje dve vrste eksternih korisnika: \textit{nezaposleno lice}, i \textit{predstavnik kompanije sa kojom Nacionalna slu\v zba sara\dj uje} (radi jednostavnosti, ovaj subjekat \'cemo nazivati \textit{kompanija}). Na Slici \ref{dsu: koriscenje onlajn sistema nacionalne sluzbe} prikazani su navedeni korisnici i procesi u kojima u\v cestvuju, a koje \'cemo opisati u daljem tekstu.\\
 
-Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. Pravljenje naloga za nezaposlena lica i kompanije je u osnovi sli\v cno. Razlike izme\dj u ova dva procesa su: dodatne aktivnosti koje Nacionalna slu\v zba mora da preuzme pri otvaranju naloga za kompanije i informacije od zna\v caja (formular u korisni\v ckom interfejsu). Zbog toga \' cemo prvo opisati Pravljenje naloga (slu\v caj upotrebe \ref{su: pravljenje naloga}), a zatim opisati pojedinosti Pravljenja naloga za kompanije (slu\v caj upotrebe \ref{su: pravljenje naloga za kompanije}). Slu\v cajem upotrebe \ref{su: prijavljivanje na sistem} detaljno je opisan proces prijavljivanja na sistem. Na kraju prikazujemo procese Pretraga oglasa poslova (slu\v caj upotrebe \ref{su: pretraga oglasa poslova}) i Otvaranje oglasa za novu ponudu za posao (slu\v caj upotrebe \ref{su: otvaranje oglasa za novu ponudu za posao}). Za svaki opisan proces dajemo i izgled korisni\v ckog interfejsa.
+Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. Pravljenje naloga za nezaposlena lica i kompanije je u osnovi sli\v cno. Razlike izme\dj u ova dva procesa su: dodatne aktivnosti koje Nacionalna slu\v zba mora da preuzme pri otvaranju naloga za kompanije i informacije od zna\v caja (formular u korisni\v ckom interfejsu). Zbog toga \' cemo prvo opisati Pravljenje naloga (slu\v caj upotrebe \ref{su: pravljenje naloga}), a zatim opisati pojedinosti pravljenja naloga za kompanije, \v sto podrazumeva Odobrenje naloga za kompanije (slu\v caj upotrebe \ref{su: odobrenje naloga za kompanije}). Slu\v cajem upotrebe \ref{su: prijavljivanje na sistem} detaljno je opisan proces prijavljivanja na sistem. Na kraju prikazujemo procese Pretraga oglasa poslova (slu\v caj upotrebe \ref{su: pretraga oglasa poslova}) i Otvaranje oglasa za novu ponudu za posao (slu\v caj upotrebe \ref{su: otvaranje oglasa za novu ponudu za posao}). Za svaki opisan proces dajemo i izgled korisni\v ckog interfejsa.
 
 \begin{figure}[H]
 	\centering
@@ -18,7 +18,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 
 \noindent U\v cesnici: Eksterni korisnik (u daljem tekstu EK)
 \\
-\\ Preduslovi: Ako je tip EK ''Nezaposleno lice'', onda EK ima evidentacioni karton.
+\\ Preduslovi: Ako je tip EK ''Nezaposleno lice'', onda EK ima evidentacioni karton. Ako je tip EK ''Kompanija'', onda je uspostavljena saradnja izme\dj u EK i Nacionalne slu\v zbe.
 \\
 \\ Postuslovi: Ili je EK uspe\v sno napravio nalog ili je stanje ostalo nepromenjeno.
 \\ 
@@ -49,7 +49,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\item Sistem je utvrdio da je tip EK ''Nezaposleno lice'', pa se prelazi na korak 13.
 	\item Sistem je utvrdio da je tip EK ''Kompanija''.
 	\begin{enumerate}
-		\item Prelazi se na slu\v caj upotrebe \ref{su: pravljenje naloga za kompanije}.
+		\item Prelazi se na slu\v caj upotrebe \ref{su: odobrenje naloga za kompanije}.
 	\end{enumerate}
 	\item Sistem otvara novi nalog sa unetim podacima, a zatim \v salje poruku na unetu email adresu za potvr\dj ivanje.
 	\item Sistem obave\v stava EK da je nalog uspe\v sno otvoren i da treba da potvrdi otvaranje naloga na email-u.
@@ -62,8 +62,8 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	Ukoliko u bilo kom od koraka 1--4 Glavnog toka, ne do\dj e do prikaza korisni\v ckog interfejsa (na primer, zbog sporog interneta), EK mo\v ze da sa\v ceka, pa da poku\v sa ponovo, ili da odustane od pravljenja naloga.
 \end{description}
 
-\subsubsection{Pravljenje naloga za kompanije}
-\label{su: pravljenje naloga za kompanije}
+\subsubsection{Odobrenje naloga za kompanije}
+\label{su: odobrenje naloga za kompanije}
 
 \subsubsection{Prijavljivanje na sistem}
 \label{su: prijavljivanje na sistem}
