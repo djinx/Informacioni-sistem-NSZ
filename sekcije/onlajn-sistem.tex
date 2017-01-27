@@ -154,12 +154,78 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \end{enumerate}
 
 \noindent Alternativni tokovi: 
-\\/
+\begin{description}
+	\item[A1. Odustajanje od prijavljivanja] ~\\
+		Ukoliko u bilo kom koraku Glavnog toka EK odlu\v ci da odustane od prijavljivanja na sistem i slu\v caj upotrebe je pokrenut iz nekog drugog slu\v caja upotrebe, sistem generi\v se gre\v sku. Slu\v caj upotrebe se nasilno zavr\v sava.
+\end{description}
 
 \subsubsection{Pretraga oglasa poslova}
 \label{su: pretraga oglasa poslova}
 
+\noindent U\v cesnici: Nezaposleno lice (u daljem tekstu NL)
+\\
+\\ Preduslovi: /
+\\
+\\ Postuslovi: NL je, potencijalno, poslao ponudu za razgovor za posao nekoj kompaniji, ili vi\v se njih. Ako jeste, onda su kompanijama automatski podneti zahtevi.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item NL bira da se prijavi na sistem.
+	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
+	\begin{itemize}
+		\item U slu\v caju uspe\v snog zavr\v savanja, prelazi se na korak 3.
+		\item Ina\v ce, izdaje se poruka o gre\v sci i slu\v caj upotrebe se zavr\v sava.
+	\end{itemize}
+	\item Sistem prikazuje listu oglasa za posao koji postoje u bazi sistema.
+	\item NL bira jedan posao.
+	\item Sistem prikazuje detaljne informacije o oglasu za posao.
+	\item NL bira da li \v zeli da kontaktira kompaniju.
+	\item NL bira da kontaktira kompaniju.
+	\begin{enumerate}
+		\item NL popunjava formular za kontaktiranje kompanije (formular \ref{}).
+		\item NL \v salje formular.
+		\item Sistem automatski dopunjava popunjeni formular informacijama o NL iz baze sistema.
+		\item Sistem \v salje zahtev za razgovor za posao kompaniji, pa se prelazi na korak 3.
+	\end{enumerate}
+	\item NL bira da ne kontaktira kompaniju, pa se prelazi na korak 9.
+	\item NL bira da se vrati na listu oglasa za posao.
+	\item Koraci 3--9 se ponavljaju dok NL ne zavr\v si sa pretragom oglasa za poslove.
+	\item NL se odjavljuje sa sistema.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\begin{description}
+	\item[A1. Promena liste oglasa] ~\\
+		U bilo kom koraku Glavnog toka EK mo\v ze da podesi da mu se prikazuju poslovi odre\dj ene kategorije, u odre\dj enom gradu, i sli\v cno. Prilikom svakog odabira, sistem izdvaja iz baze samo one poslove koje zadovoljavaju uslove koje se odabrao EK. Izvr\v savanje se nastavlja u koraku 3.
+\end{description}
+
 \subsubsection{Otvaranje oglasa za novu ponudu za posao}
 \label{su: otvaranje oglasa za novu ponudu za posao}
+
+\noindent U\v cesnici: Kompanije (u daljem tekstu K)
+\\
+\\ Preduslovi: /
+\\
+\\ Postuslovi: K je objavio oglas posao.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item K bira da se prijavi na sistem.
+	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
+	\begin{itemize}
+		\item U slu\v caju uspe\v snog zavr\v savanja, prelazi se na korak 3.
+		\item Ina\v ce, izdaje se poruka o gre\v sci i slu\v caj upotrebe se zavr\v sava.
+	\end{itemize}
+	\item K bira da objavi oglas za posao.
+	\item Sistem tra\v zi od K da navede detalje o radnom mestu.
+	\item K navodi detalje o radnom mestu.
+	\item Sistem tra\v zi od K da popuni formular o konkursu na radno mesto.
+	\item K popunjava formular, a zatim potvr\dj uje izbor.
+	\item Sistem registruje novi oglas u bazi.
+	\item K se odjavljuje sa sistema.
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\\/
 
 \newpage
