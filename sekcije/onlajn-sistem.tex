@@ -117,6 +117,45 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \subsubsection{Prijavljivanje na sistem}
 \label{su: prijavljivanje na sistem}
 
+\noindent U\v cesnici: Eksterni korisnik (u daljem tekstu EK)
+\\
+\\ Preduslovi: /
+\\
+\\ Postuslovi: Ili se EK uspe\v sno prijavio na sistem ili je izdata poruka o gre\v sci.
+\\ 
+\\ Glavni tok:
+\begin{enumerate}
+	\item Sistem prikazuje formular za prijavljivanje na sistem (formular \ref{}).
+	\item EK unosi korisni\v cko ime i lozinku.
+	\item Sistem, na osnovu unetih podataka, proverava da li ve\'c postoji takav korisnik.
+	\item Sistem ustanovljava da postoji takav korisnik.
+	\begin{enumerate}
+		\item Sistem proverava da li se uneta lozinka poklapa sa lozinkom u bazi sistema.
+		\item Sistem ustanovljava da se uneta lozinka poklapa, pa se slu\v caj upotrebe zavr\v sava.
+		\item Sistem ustanovljava da se lozinka ne poklapa.
+		\begin{enumerate}
+			\item \item Sistem prikazuje poruku sa obave\v stenjem i nudi EK opciju da promeni \v lozinku (ukoliko ju je zaboravio).
+			\item EK bira da li \v zeli da promeni lozinku.
+			\item EK bira da promeni lozinku.
+			\begin{enumerate}
+				\item Sistem tra\v zi od EK da unese email adresu.
+				\item NK unosi email adresu i potvr\dj uje unos.
+				\item Sistem obave\v stava EK da mu je poslata nova lozinka na email adresu.
+				\item Slu\v caj upotrebe se zavr\v sava.
+			\end{enumerate}
+			\item EK bira da ne promeni lozinku, pa se prelazi na korak 1.
+		\end{enumerate}
+	\end{enumerate}
+	\item Sistem ustanovljava da ne postoji takav korisnik.
+	\begin{enumerate}
+		\item Sistem obave\v stava EK da ne postoji korisnik sa unetim korisni\v ckim imenom.
+		\item EK bira da poku\v sa ponovo, pa se prelazi na korak 1.
+	\end{enumerate}
+\end{enumerate}
+
+\noindent Alternativni tokovi: 
+\\/
+
 \subsubsection{Pretraga oglasa poslova}
 \label{su: pretraga oglasa poslova}
 
