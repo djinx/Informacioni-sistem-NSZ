@@ -7,6 +7,9 @@
 % podrska za graficke elemente
 \usepackage{graphicx}
 
+% podrska za margine i sl.
+\usepackage{geometry}
+
 % podrska za boje
 \usepackage{xcolor}
 
@@ -50,6 +53,43 @@
 \renewcommand{\labelenumii}{\theenumii.}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
 \renewcommand{\theenumiii}{\theenumii.\arabic{enumiii}}
+
+% za rotiranje stranica
+\usepackage{pdflscape}
+
+% za podesavanje hedera i futera
+\usepackage{fancyhdr}
+
+% okruzenje za landscape
+\newenvironment{mylandscape}
+{
+	\newpage
+	\pagestyle{plain}
+	
+	\paperwidth=\pdfpageheight
+	\paperheight=\pdfpagewidth
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+	
+	\headwidth=\textheight
+	
+	\begingroup 
+	
+	\vsize=\textwidth
+	\hsize=\textheight
+}
+{
+	\endgroup
+	\newpage
+	
+	\paperwidth=\pdfpageheight
+	\paperheight=\pdfpagewidth
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+	
+	\headwidth=\textwidth
+	\newpage
+}
 
 % meta-informacije o tekstu
 \author{Ajzenhamer Nikola 1083/2016\\Bukurov Anja 1082/2016\\Vojislav Stankovi\'c 1080/2016}
