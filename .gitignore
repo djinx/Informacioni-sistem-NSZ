@@ -6,5 +6,10 @@ NSZ.synctex.gz
 NSZ.toc
 sekcije/*.aux
 dijagrami/dijagrami-slucajeva-upotrebe/*.vpp.bak*
+dijagrami/dijagrami-slucajeva-upotrebe/*.vpp.vbak
 dijagrami/dijagrami-slucajeva-upotrebe/*.vux
 dijagrami/dijagrami-slucajeva-upotrebe/*.vpp.lck
+dijagrami/bpmn-dijagrami/*.vpp.bak*
+dijagrami/bpmn-dijagrami/*.vpp.vbak
+dijagrami/bpmn-dijagrami/*.vux
+dijagrami/bpmn-dijagrami/*.vpp.lck
