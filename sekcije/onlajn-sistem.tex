@@ -134,7 +134,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 		\item Sistem ustanovljava da se uneta lozinka poklapa, pa se slu\v caj upotrebe zavr\v sava.
 		\item Sistem ustanovljava da se lozinka ne poklapa.
 		\begin{enumerate}
-			\item \item Sistem prikazuje poruku sa obave\v stenjem i nudi EK opciju da promeni \v lozinku (ukoliko ju je zaboravio).
+			\item Sistem prikazuje poruku sa obave\v stenjem i nudi EK opciju da promeni \v lozinku (ukoliko ju je zaboravio).
 			\item EK bira da li \v zeli da promeni lozinku.
 			\item EK bira da promeni lozinku.
 			\begin{enumerate}
@@ -172,10 +172,10 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \begin{enumerate}
 	\item NL bira da se prijavi na sistem.
 	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
-	\begin{itemize}
+	\begin{enumerate}
 		\item U slu\v caju uspe\v snog zavr\v savanja, prelazi se na korak 3.
 		\item Ina\v ce, izdaje se poruka o gre\v sci i slu\v caj upotrebe se zavr\v sava.
-	\end{itemize}
+	\end{enumerate}
 	\item Sistem prikazuje listu oglasa za posao koji postoje u bazi sistema.
 	\item NL bira jedan posao.
 	\item Sistem prikazuje detaljne informacije o oglasu za posao.
@@ -202,7 +202,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \subsubsection{Otvaranje oglasa za novu ponudu za posao}
 \label{su: otvaranje oglasa za novu ponudu za posao}
 
-\noindent U\v cesnici: Kompanije (u daljem tekstu K)
+\noindent U\v cesnici: Kompanija (u daljem tekstu K)
 \\
 \\ Preduslovi: /
 \\
@@ -212,10 +212,10 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \begin{enumerate}
 	\item K bira da se prijavi na sistem.
 	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
-	\begin{itemize}
+	\begin{enumerate}
 		\item U slu\v caju uspe\v snog zavr\v savanja, prelazi se na korak 3.
 		\item Ina\v ce, izdaje se poruka o gre\v sci i slu\v caj upotrebe se zavr\v sava.
-	\end{itemize}
+	\end{enumerate}
 	\item K bira da objavi oglas za posao.
 	\item Sistem tra\v zi od K da navede detalje o radnom mestu.
 	\item K navodi detalje o radnom mestu.
@@ -233,5 +233,29 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.87\textwidth]{dijagrami/dijagrami-sekvence/pravljenje-naloga.png}
-	\caption{Dijagram sekvence slu\v caja upotrebe ''Pravljenje naloga'' (\ref{su: pravljenje naloga})}.
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Pravljenje naloga'' (\ref{su: pravljenje naloga}).}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dijagrami/dijagrami-sekvence/odobrenje-naloga-za-kompanije.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Odobrenje naloga za kompanije'' (\ref{su: odobrenje naloga za kompanije}).}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dijagrami/dijagrami-sekvence/prijavljivanje-na-sistem.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Prijavljivanje na sistem'' (\ref{su: prijavljivanje na sistem}).}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{dijagrami/dijagrami-sekvence/pretraga-oglasa-poslova.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Pretraga oglasa poslova'' (\ref{su: pretraga oglasa poslova}).}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dijagrami/dijagrami-sekvence/otvaranje-oglasa-za-novu-ponudu-za-posao.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Otvaranje oglasa za novu ponudu za posao'' (\ref{su: otvaranje oglasa za novu ponudu za posao}).}
 \end{figure}
