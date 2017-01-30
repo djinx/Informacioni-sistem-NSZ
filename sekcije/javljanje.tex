@@ -38,25 +38,24 @@ Unapre\dj enje trenutnog re\v senja predstavlja Javljanje putem interneta. Ovim 
 \\ 
 \\ Glavni tok:
 \begin{enumerate}
-	\item NL pristupa onlajn sistemu Nacionalne slu\v zbe.
-	\item Sistem prikazuje formular za prijavljivanje na sistem.
+	\item NL bira da se prijavi na sistem.
 	\item Prelazi se na slu\v caj upotrebe \ref{su: prijavljivanje na sistem}.
 	\begin{enumerate}
-		\item U slu\v caju uspe\v snog prijavljivanja na sistem, sistem prikazuje po\v cetni interfejs NL-u, i prelazi se na korak 4.
-		\item Ina\v ce, sistem prikazuje poruku NL-u i slu\v caj upotrebe se zavr\v sava.
+		\item U slu\v caju uspe\v snog zavr\v savanja, prelazi se na korak 3.
+		\item Ina\v ce, izdaje se poruka o gre\v sci i slu\v caj upotrebe se zavr\v sava.
 	\end{enumerate}
 	\item NL bira opciju ``Redovno javljanje''.
+	\item Sistem bele\v zi da je NL uspe\v sno izvr\v sio proceduru.
 	\item NL bira da li \v zeli da zaka\v ze sastanak sa savetnikom za zapo\v sljavanje ili ne.
 	\item NL bira da zaka\v ze sastanak.
 	\begin{enumerate}
 		\item Sistem pronalazi savetnika za zapo\v sljavanje koji je zadu\v zen za NL.
-		\item Sistem zakazuje prvi slobodni termin za sastanak.
-		\item Sistem prikazuje NL-u zakazani termin.
-		\item NL potvr\dj uje izbor, i prelazi se na korak 8.
+		\item Sistem prikazuje spisak dostupnih termina.
+		\item NL bira jedan od ponu\dj enih termina.
+		\item Sistem zakazuje termin za sastanak.
 	\end{enumerate}
 	\item NL bira da ne zaka\v ze sastanak, pa se prelazi na korak 8.
-	\item Sistem bele\v zi da je NL uspe\v sno obavio proceduru.
-	\item Sistem bele\v zi da \v salterski slu\v zbenik treba da upi\v se datume i stavi potpis u evidencioni karton NL-a kada NL slede\'ci put do\dj e u Nacionalnu slu\v zbu.
+	\item NL se odjavljuje sa sistema.
 \end{enumerate}
 
 \noindent Alternativni tokovi: 
@@ -152,3 +151,11 @@ Unapre\dj enje trenutnog re\v senja predstavlja Javljanje putem interneta. Ovim 
 		\caption{BPMN dijagram potprocesa ''Savetovanje nezaposlenog lica'' procesa ''Redovno javljanje'' (Slika \ref{bpmnd: redovno javljanje}).}
 	\end{figure}
 \end{mylandscape}
+
+\subsubsection{Dijagrami sekvence}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{dijagrami/dijagrami-sekvence/javljanje-putem-interneta.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Javljanje putem interneta'' (\ref{su: javljanje putem interneta}).}
+\end{figure}
