@@ -25,7 +25,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \\ Glavni tok:
 \begin{enumerate}
 	\item EK pristupa onlajn sistemu Nacionalne slu\v zbe.
-	\item Sistem prikazuje po\v cetnu stranu \ref{}.
+	\item Sistem prikazuje po\v cetnu stranu \ref{for: index}.
 	\item EK bira opciju ''Registracija novog korisnika''.
 	\item U zavisnosti od tipa EK, Sistem prikazuje odgovaraju\' ci formular.
 	\item EK popunjava formular.
@@ -72,7 +72,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 
 \noindent U\v cesnici: Kompanija (u daljem tekstu K), Savetnik za poslodavce (u daljem tekstu SP)
 \\
-\\ Preduslovi: SP ima pristup sistemu i autorizovan je. K ima li\v cnu kartu. Ukoliko je slu\v caj upotrebe pokrenut iz slu\v caja upotrebe ''Pravljenje naloga'', onda su dostupne informacije iz formulara koji se popunjava u tom slu\v caju upotrebe (formular \ref{}).
+\\ Preduslovi: SP ima pristup sistemu i autorizovan je. K ima li\v cnu kartu. Dostupne su informacije iz formulara \ref{for: k-registracija}.
 \\
 \\ Postuslovi: Ili je K uspe\v sno odobreno pravljenje naloga ili je zabele\v zen poziv za saradnju ili je stanje ostalo nepromenjeno i izdata je poruka o gre\v sci.
 \\ 
@@ -125,7 +125,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 \\ 
 \\ Glavni tok:
 \begin{enumerate}
-	\item Sistem prikazuje formular za prijavljivanje na sistem (formular \ref{}).
+	\item Sistem prikazuje formular za prijavljivanje na sistem (formular \ref{for: prijava}).
 	\item EK unosi korisni\v cko ime i lozinku.
 	\item Sistem, na osnovu unetih podataka, proverava da li ve\'c postoji takav korisnik.
 	\item Sistem ustanovljava da postoji takav korisnik.
@@ -182,7 +182,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\item NL bira da li \v zeli da kontaktira kompaniju.
 	\item NL bira da kontaktira kompaniju.
 	\begin{enumerate}
-		\item NL popunjava formular za kontaktiranje kompanije (formular \ref{}).
+		\item NL popunjava formular za kontaktiranje kompanije (formular \ref{for: fl-slanjePonude}).
 		\item NL \v salje formular.
 		\item Sistem automatski dopunjava popunjeni formular informacijama o NL iz baze sistema.
 		\item Sistem \v salje zahtev za razgovor za posao kompaniji, pa se prelazi na korak 3.
@@ -219,7 +219,7 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\item K bira da objavi oglas za posao.
 	\item Sistem tra\v zi od K da navede detalje o radnom mestu.
 	\item K navodi detalje o radnom mestu.
-	\item Sistem tra\v zi od K da popuni formular o konkursu na radno mesto.
+	\item Sistem tra\v zi od K da popuni formular o konkursu na radno mesto (formular \ref{for: k-noviOglas}).
 	\item K popunjava formular, a zatim potvr\dj uje izbor.
 	\item Sistem registruje novi oglas u bazi.
 	\item K se odjavljuje sa sistema.
@@ -258,4 +258,85 @@ Za oba korisnika je omogu\' ceno pravljenje naloga i prijavljivanje na sistem. P
 	\centering
 	\includegraphics[width=\textwidth]{dijagrami/dijagrami-sekvence/otvaranje-oglasa-za-novu-ponudu-za-posao.png}
 	\caption{Dijagram sekvence slu\v caja upotrebe ''Otvaranje oglasa za novu ponudu za posao'' (\ref{su: otvaranje oglasa za novu ponudu za posao}).}
+\end{figure}
+
+\newpage
+\subsubsection{Formulari}
+
+Prvo prikazujemo primere izgleda korisni\v ckog interfejsa za sve eksterne korisnike. Ovi formulari su vidljivi svim posetiocima onlajn sistema Nacionalne slu\v zbe.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/index.png}
+	\caption{Po\v cetna strana.}
+	\label{for: index}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/prijava.png}
+	\caption{Prijavljivanje na sistem.}
+	\label{for: prijava}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/registracija.png}
+	\caption{Registracija na sistem.}
+	\label{for: registracija}
+\end{figure}
+
+Formulari za registraciju na sistem se razlikuju za fizi\v cka i pravna lica. Dajemo primere oba formulara.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.95\textheight]{korisnicki-interfejs/slike/fl-registracija.png}
+	\caption{Fizi\v cko lice: Registracija.}
+	\label{for: fl-registracija}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.95\textheight]{korisnicki-interfejs/slike/k-registracija.png}
+	\caption{Kompanija: Registracija.}
+	\label{for: k-registracija}
+\end{figure}
+
+Naredni formulari su vidljivi isklju\v civo fizi\v ckim licima, i to nakon uspe\v snog prijavljivanja na sistem.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/fl-index.png}
+	\caption{Fizi\v cko lice: Po\v cetna strana.}
+	\label{for: fl-index}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{korisnicki-interfejs/slike/fl-detaljiOglasa.png}
+	\caption{Fizi\v cko lice: Detalji oglasa.}
+	\label{for: fl-detaljiOglasa}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/fl-slanjePonude.png}
+	\caption{Fizi\v cko lice: Slanje ponude.}
+	\label{for: fl-slanjePonude}
+\end{figure}
+
+Kona\v cno, prikazujemo formulare koji su vidljivi isklju\v civo pravnim licima (poslodavcima), i to nakon uspe\v snog prijavljivanja na sistem.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{korisnicki-interfejs/slike/k-index.png}
+	\caption{Kompanija: Po\v cetna strana.}
+	\label{for: k-index}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.95\textheight]{korisnicki-interfejs/slike/k-noviOglas.png}
+	\caption{Kompanija: Novi oglas.}
+	\label{for: k-noviOglas}
 \end{figure}
