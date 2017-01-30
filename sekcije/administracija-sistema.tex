@@ -11,6 +11,8 @@ Administracija sistema odnosi se na dodavanje novih zaposlenih u Nacionalnoj slu
 
 \subsubsection{Slu\v caj upotrebe: Dodavanje novog korisnika}
 
+\label{su: dodavanje novog korisnika}
+
 \noindent U\v cesnici: Administrator sistema (AS), Zaposleni (Z)
 \\
 \\ Preduslovi: Z je zaposlen u Nacionalnoj slu\v zbi za zapo\v sljavanje. AS ima privilegovan pristup sistemu i ulogova je u sistem.
@@ -54,6 +56,8 @@ Administracija sistema odnosi se na dodavanje novih zaposlenih u Nacionalnoj slu
 
 \subsubsection{Slu\v caj upotrebe: Brisanje korisnika}
 
+\label{su: brisanje korisnika}
+
 \noindent U\v cesnici: Administrator sistema (AS)
 \\
 \\ Preduslovi: AS ima privilegovan pristup sistemu i ulogova je u sistem. AS je primio zahtev za brisanje korisnika.
@@ -76,6 +80,8 @@ Administracija sistema odnosi se na dodavanje novih zaposlenih u Nacionalnoj slu
 
 \subsubsection{Slu\v caj upotrebe: Back-up baze podataka}
 
+
+\label{su: backup}
 \noindent U\v cesnici: Administrator sistema (AS)
 \\
 \\ Preduslovi: Sistem ispravno funkcioni\v se. AS je ulogovan na sistem i ima privilegovan pristup.
@@ -99,3 +105,27 @@ Administracija sistema odnosi se na dodavanje novih zaposlenih u Nacionalnoj slu
 \end{enumerate}
 
 \noindent Alternatinvni tok: /
+
+\subsubsection{Dijagrami sekvence}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\paperwidth]{dijagrami/dijagrami-sekvence/dodavanje-novog-korisnika.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Dodavanje novog korisnika'' (\ref{su: dodavanje novog korisnika}).}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\paperwidth]{dijagrami/dijagrami-sekvence/brisanje-korisnika.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Brisanje korisnika' (\ref{su: brisanje korisnika}).}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{dijagrami/dijagrami-sekvence/backup.png}
+	\caption{Dijagram sekvence slu\v caja upotrebe ''Back-up baze podataka'' (\ref{su: backup}).}
+\end{figure}
