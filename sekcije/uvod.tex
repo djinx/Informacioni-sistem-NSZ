@@ -8,27 +8,17 @@ U nastavku \' cemo detaljnije opisati rad Nacionalne slu\v zbe.
 
 \subsection{Nacionalna slu\v zba za zapo\v sljavanje}
 
-Nacionalna slu\v zba za zapo\v sljavanje (u daljem tekstu Nacionalna slu\v zba) obavlja poslove zapo\v sljavanja, osiguranja za slu\v caj nezaposlenosti, ostvarivanje prava iz osiguranja za slu\v caj nezaposlenosti i druga prava u skladu sa zakonom, odnosno poslove vo\dj enja evidencija u oblasti zapo\v sljavanja, kao i stru\v cno-organi\-zacione, upravne, ekonomsko-finansijske i druge op\v ste poslove u oblasti zapo\v sljavanja i osiguranja za slu\v caj nezaposlenosti, u skladu sa zakonom, svojim statutom i drugim aktima Nacionalne slu\v zbe.
+Nacionalna slu\v zba za zapo\v sljavanje (u daljem tekstu Nacionalna slu\v zba) obavlja poslove zapo\v sljavanja, osiguranja za slu\v caj nezaposlenosti, ostvarivanje prava iz osiguranja za slu\v caj nezaposlenosti i druga prava u skladu sa zakonom, odnosno poslove vo\dj enja evidencija u oblasti zapo\v sljavanja, kao i stru\v cno-organi\-zacione, upravne, ekonomsko-finansijske i druge op\v ste poslove u oblasti zapo\v sljavanja i osiguranja za slu\v caj nezaposlenosti, u skladu sa zakonom, svojim statutom i drugim aktima Nacionalne slu\v zbe.\\
 
-\begin{mylandscape}
-	\subsubsection{Dijagram konteksta}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\paperwidth]{dijagrami/dijagrami-toka-podataka/zaposljavanje-dijagram-konteksta.png}
-		\caption{Dijagram konteksta — prikaz sistema kao proces ''Zapo\v sljavanje''.}
-		\label{dtp: dijagram konteksta}
-	\end{figure}
+Kao \v sto vidimo, domen rada Nacionalne slu\v zbe je prili\v cno op\v siran. Zbog toga smo se odlu\v cili da ovaj rad svedemo na podskup ovog domena, i to na poslove: zapo\v sljavanja, vo\dj enja evidencija u oblasti zapo\v sljavanja, i ostvarivanja prava na nov\v canu naknadu u slu\v caju nezaposlenosti. Ovi poslovi se mogu kategorisati na razli\v cite na\v cine, a mi smo odabrali jedan od njih, o \v cemu \' cemo diskutovati nadalje.\\
 
-	\newpage
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.7\paperwidth]{dijagrami/dijagrami-toka-podataka/zaposljavanje-dtp-nivoa-0.png}
-		\caption{Dekompozicija procesa ''Zapo\v sljavanje'' (Slika \ref{dtp: dijagram konteksta}).}
-	\end{figure}
+Posao zapo\v sljavanja Nacionalna slu\v zba vr\v si kroz mnogobrojne procese. Neki od njih su ''Aktivno tra\v zenje posla'' i ''Posredovanje u zapo\v sljavanju''. Prvi proces podrazumeva svaki proces koji nezaposlenom licu pru\v za napredovanje u karijeri na neki na\v cin. Drugi proces podrazumeva procese koji se zasnivaju na aktivnoj komunikaciji i saradnji izme\dj u Nacionalne slu\v zbe i poslodavaca.\\
 
-\end{mylandscape}
+Za opisivanje posla vo\dj enja evidencija u oblasti zapo\v sljavanja, odlu\v cili smo se za procese ''Prijavljivanje na evidenciju'' i ''Redovno javljanje i konsultovanje''. Ovi procesi treba da ilustruju na\v cin vo\dj enja osnovnih, ali i detaljnijih, podataka o nezaposlenim licima. Jednom kada su ovi procesi utemeljeni mogu se razmatrati dalja unapre\dj enja i naprednije tehnike vo\dj enja evidencija (o \v cemu nismo diskutovali u ovom radu).\\
+
+Tre\'ci va\v zan proces jeste ''Tra\v zenje ispomo\' ci tokom zapo\v sljavanja''. Kao ilustraciju dela ovog procesa, opisan je proces ''Ostvarivanje prava na nov\v canu naknadu''.\\
+
+Detaljnije informacije o zahtevima sistema izlagali smo ispred svakog prepoznatog procesa od zna\v caja.
 
 \subsection{Metodologija rada}
 
@@ -42,16 +32,38 @@ Zahtevi sistema su modelirani dijagramima slu\v cajeva upotrebe (engl. \textit{U
 
 Dijagrami sekvence (engl. \textit{Sequence Diagram}) ilustruju objekte koji u\v cestvuju u slu\v caju upotrebe i poruke koje se razmenjuju izme\dj u njih u toku vremena, u jednom slu\v caju upotrebe (\cite{SAAD}). Ove dijagrame \' cemo koristiti pri slu\v cajevima upotrebe za koje smatramo da je potrebno dodatno opisati tok scenarija u vremenu.\\
 
+Dijagrame koje opisujemo u nastavku koristimo kao dodatnu dopunu sadr\v zaja.\\
+
 Dijagram stanja (engl. \textit{state diagram} ili \textit{state machine diagram}) predstavlja dinami\v cki model koji prikazuje razli\v cita stanja kroz koje jedna klasa prolazi tokom svog \v zivota (\cite{SAAD}).\\
 
-Dijagrami toka podataka (engl. \textit{Data Flow Diagrams}) predstavljaju jednu od osnovnih tehnika strukturnih metodologija. DTP opisuju na koji na\v cin se kre\' cu podaci kroz sistem. Razlikujemo nivoe DTP, pa tako dijagram konteksta predstavlja DTP najvi\v seg nivoa i njime se \v citav sistem (podsistem) predstavlja kao jedan proces (\cite{smalkov-slajdovi}). Dijagram konteksta \' cemo koristiti upravo da bismo pokazali granice sistema i komunikaciju sa njegovim okru\v zenjem.\\
+Dijagrami toka podataka (engl. \textit{Data Flow Diagrams}) predstavljaju jednu od osnovnih tehnika strukturnih metodologija. DTP opisuju na koji na\v cin se kre\' cu podaci kroz sistem. Razlikujemo nivoe DTP, pa tako dijagram konteksta predstavlja DTP najvi\v seg nivoa i njime se \v citav sistem (podsistem) predstavlja kao jedan proces (\cite{smalkov-slajdovi}). Dijagram konteksta \' cemo koristiti upravo da bismo pokazali granice sistema i komunikaciju sa njegovim okru\v zenjem. DTP nivoa 0 prikazuje dekompoziciju dijagrama konteksta. Iako se mogu definisati dijagrami vi\v sih nivoa, odlu\v cili smo da prika\v zemo samo dijagram konteksta i DTP nivoa 0.\\
 
 Dijagram klasa (engl. \textit{Class Diagram}) predstavlja stati\v cki model koji podr\v zava stati\v cki pogled sistema u razvoju. On prikazuje klase i odnose izme\dj u klasa koje ostaju nepromenljive u sistemu tokom vremena (\cite{SAAD}).\\
 
 Kao softversko re\v senje za izradu pomenutih dijagrama, kori\v s\' cen je Visual Paradigm 14.\\
 
-Veliki broj opisanih slu\v cajeva upotrebe sadr\v zi rukovanje sa sistemom, pa zbog toga, u okviru ovog rada, obra\' cena je i pa\v znja na projektovanje korisni\v ckog interfejsa. Kao pristup izrade prototipa (engl. \textit{prototyping}) korisni\v ckog interfejsa odabran je HTML prototip.\\
+Veliki broj opisanih slu\v cajeva upotrebe podrazumeva rukovanje sa sistemom, pa zbog toga, u okviru ovog rada, obra\' cena je i pa\v znja na projektovanje korisni\v ckog interfejsa. Kao pristup izrade prototipa (engl. \textit{prototyping}) korisni\v ckog interfejsa odabran je HTML prototip.\\
 
 HTML prototip se izgra\dj uje kori\v s\'cenjem Veb stranica napisanih u HTML (engl. \textit{HyperText Mark-up Language}) jeziku. Postupak podrazumeva kreiranje serije Veb stranica koje pokazuju fundamentalne delove sistema. Korisnici mogu da interaguju sa stranicama klikom na dugmad i uno\v senjem podataka u formulare (naravno, po\v sto nema sistema u pozadini, podaci se ne procesuiraju). Stranice su povezane tako da, kada korisnik klikne na dugmad, prikazuje se zahtevani deo sistema (\cite{SAAD}).
 
-\newpage
+\begin{mylandscape}
+	\subsubsection{Dijagrami toka podataka}
+	
+	Na samom po\v cetku, prika\v zimo obra\dj eni sistem kao celinu, kao i prepoznate procese koji se odvijaju u njemu i njegove granice.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\paperwidth]{dijagrami/dijagrami-toka-podataka/zaposljavanje-dijagram-konteksta.png}
+		\caption{Dijagram konteksta — prikaz sistema kao proces ''Zapo\v sljavanje''.}
+		\label{dtp: dijagram konteksta}
+	\end{figure}
+	
+	\newpage
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\paperwidth]{dijagrami/dijagrami-toka-podataka/zaposljavanje-dtp-nivoa-0.png}
+		\caption{Dekompozicija procesa ''Zapo\v sljavanje'' na nivo 0 (Slika \ref{dtp: dijagram konteksta}).}
+	\end{figure}
+	
+\end{mylandscape}

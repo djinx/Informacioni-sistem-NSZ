@@ -41,7 +41,10 @@
 
 % promena standardnih imena:
 %     Bibliografija -> Literatura
-\renewcommand{\refname}{Literatura}
+% \renewcommand{\refname}{Literatura}
+\addto\captionsserbian{
+	\renewcommand{\refname}{Literatura}
+}
 
 % za [H] u figure
 \usepackage{float} 
@@ -54,6 +57,21 @@
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
 \renewcommand{\theenumiii}{\theenumii.\arabic{enumiii}}
 \renewcommand{\theenumiv}{\theenumiii.\arabic{enumiv}}
+
+% za menjanje izgleda naslova, podnaslova, i sl.
+\usepackage{titlesec}
+
+% menjanje stila subsubsection-a
+\titleformat
+{\subsubsection} % command
+{\titlerule[1pt]\vspace{3pt}\bfseries} % format
+{\thesubsubsection.} % label
+{0.5em} % sep
+{} % before-code
+[
+	\vspace{1pt}
+	{\titlerule[1pt]}
+]
 
 % za rotiranje stranica
 \usepackage{pdflscape}
