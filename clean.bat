@@ -4,5 +4,7 @@ del NSZ.out
 del NSZ.synctex.gz
 del NSZ.toc
 del sekcije\*.aux
-del dijagrami\dijagrami-slucajeva-upotrebe\*.vpp.bak*
-del dijagrami\dijagrami-slucajeva-upotrebe\*.vux
+del dijagrami\*\*.vpp.bak*
+del dijagrami\*\*.vpp.vbak
+del dijagrami\*\*.vux
+del dijagrami\*\*.vpp.lck
