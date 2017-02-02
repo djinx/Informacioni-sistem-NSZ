@@ -1,0 +1,245 @@
+\documentclass[11pt]{beamer}
+\usetheme{Warsaw}
+
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=violet!60!gray}
+\setbeamercolor*{palette quaternary}{fg=violet,bg=white!70!gray}
+\setbeamercolor*{item}{fg=violet}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+\usepackage[serbian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\author{Ajzenhamer Nikola \\ Bukurov Anja \\ Stankovi\' c Vojislav }
+
+
+\title{Informacioni sistem Nacionalne slu\v zbe za zapo\v sljavanje}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+
+\section{Nacionalna slu\v zba za zapo\v sljavanje}
+
+\begin{frame}{Opis}
+Nacionalna slu\v zba za zapo\v sljavanje obavlja poslove 
+	\begin{itemize}
+		\item zapo\v sljavanja
+		\item osiguranja za slu\v caj nezaposlenosti
+		\item ostvarivanje prava iz osiguranja za slu\v caj nezaposlenosti i druga prava u skladu sa zakonom
+		\item vo\dj enja evidencija u oblasti zapo\v sljavanja
+		\item kao i stru\v cno-organi\-zacione, upravne, ekonomsko-finansijske i druge op\v ste poslove u oblasti zapo\v sljavanja i osiguranja za slu\v caj nezaposlenosti, u skladu sa zakonom, svojim statutom i drugim aktima Nacionalne slu\v zbe.
+	\end{itemize}
+	
+\end{frame}
+
+\section{Metodologija rada}
+\begin{frame}{Metodologija rada}
+	\begin{itemize}
+		\item Prilikom izrade rada, informacije o Nacionalnoj slu\v zbi su prikupljene iz dva glavna izvora.
+		\item  Prvi izvor predstavljaju zvani\v cna dokumenta Nacionalne slu\v zbe, i to ''Program rada Nacionalne slu\v zbe za zapo\v sljavanje (za 2016. godinu)'' i ''Statut Nacionalne slu\v zbe za zapo\v sljavanje'', \v cijim razmatranjem smo dolazili do formalnih informacija o sistemu. 
+		\item Drugi izvor informacija je razgovor sa zaposlenim licima, \v sto nam je prevashodno omogu\' cilo da steknemo uvid u mogu\' ca unapre\dj enja sistema.
+	\end{itemize}
+\end{frame}
+
+\subsection{Dijagrami}
+\begin{frame}{Kori\v s\' ceni dijagrami}
+	\begin{itemize}
+		\item Zahtevi sistema su modelirani dijagramima slu\v cajeva upotrebe.
+		\item BPMN dijagrame (posebno, BPMN dijagrame saradnji) koristili smo za opisivanje interakcije izme\dj u entiteta tokom slu\v cajeva upotrebe.
+		\item Dijagrami sekvence koristili smo pri slu\v cajevima upotrebe za koje smatramo da je potrebno dodatno opisati tok scenarija u vremenu.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Dijagram stanja
+		\item Dijagrami toka podataka
+		\item Dijagram klasa
+	\end{itemize}
+\end{frame}
+
+\subsection{Softver}
+\begin{frame}
+	\begin{itemize}
+		\item Kao softversko re\v senje za izradu pomenutih dijagrama, kori\v s\' cen je Visual Paradigm 14.
+		\item Kao pristup izrade prototipa korisni\v ckog interfejsa odabran je HTML prototip.
+	\end{itemize}
+\end{frame}
+
+\section{Opisani slu\v cajevi upotrebe}
+
+\begin{frame}{Prijava na evidenciju}
+	\begin{itemize}
+		\item Nezaposleno lice dolazi li\v cno u Nacionalnu slu\v zbu za zapo\v sljavanje radi prijave na evidenciju. U zavisnosti od toga da li je lice ve\' c bilo na evidenciji ili ne razlikujemo dva slu\v caja:
+		\begin{itemize}
+			\item ukoliko lice nije bilo nikada ranije prijavljeno na evideniciji, izvr\v sava se slu\v caj upotrebe Prva prijava.
+			\item ukoliko je lice bilo prijavljeno na evidenciju ali je izgubilo status aktivnog tra\v zenja posla zbog neredovnog javljanja izvr\v sava se slu\v caj upotrebe Ponovna prijava.
+		\end{itemize}
+	\item Nakon prijave, Nezaposleno lice odlazi na Prvo javljanje kod savetnika.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Kori\v s\' cenje onlajn sistema Nacionalne slu\v zbe}
+	\begin{itemize}
+		\item Onlajn sistem Nacionalne slu\v zbe je veb aplikacija koja omogu\' cava obavljanje odre\dj enih poslovnih funkcija vezanih za eksterne korisnike putem interneta. 
+		\item Kori\v s\' cenjem onlajn sistema, eksterni korisnici mogu uz manje napora i br\v ze da dobiju usluge Nacionalne slu\v zbe.
+		
+		\item Onlajn sistem prepoznaje dve vrste eksternih korisnika: \textit{nezaposleno lice}, i \textit{predstavnik kompanije sa kojom Nacionalna slu\v zba sara\dj uje}.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Kori\v s\' cenje onlajn sistema Nacionalne slu\v zbe}
+	\begin{itemize}
+		
+		\item Za oba korisnika prvi korak je Pravljenje naloga. 
+		\item U slu\v caju pravljenja naloga za kompaniju, opisan je dodatan slu\v caj upotrebe Odobrenje naloga za kompanije
+		\item Slede\' ci korak je Prijavljivanje na sistem
+		\item Na kraju prikazujemo procese Pretraga oglasa poslova i Otvaranje oglasa za novu ponudu za posao 
+		\item Za svaki opisan proces dajemo i izgled korisni\v ckog interfejsa. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Redovno javljanje}
+	\begin{itemize}
+		\item Redovno javljanje predstavlja postupak vo\dj enja redovne evidencije teku\' ceg stanja nezaposlenog lica u Nacionalnoj slu\v zbi.
+		\item Nezaposleno lice je u obavezi da se na svaka 3 meseca javi u Nacionalnoj slu\v zbi, i da izvesti zaposlene koji posreduju u zapo\v sljavanju o svom trenutnom statusu.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Redovno javljanje}
+	U zavisnosti od nivoa izve\v stavanja nezaposleno lice mo\v ze da bira na\v cin redovnog javljanja, i to:
+	\begin{itemize}
+		\item ukoliko nema potrebu za dodatnim uslugama Nacionalne slu\v zbe, bira jedno od naredna dva:
+		\begin{itemize}
+			\item Javljanje putem interneta, ili
+			\item Javljanje na \v salteru.
+		\end{itemize}
+		
+		\item ukoliko ima potrebu za dodatnim uslugama Nacionalne slu\v zbe, onda bira Javljanje kod savetnika.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Posredovanje u zapo\v sljavanju}
+	\begin{itemize}
+		\item Poslodavac \v zeli da zaposli radnika preko NSZ. On dolazi u slu\v zbu i na \v salteru mu ka\v zu da moraju da ga registruju u njihovu bazu poslodavaca. \item Nakon registracije, poslodavac mo\v ze da objavljuje oglase za nepopunjena radna mesta u njegovoj kompaniji.
+		\item Nakon toga poslodavac zapo\v sljava radnika i pravi se izve\v staj o realizaciji konkursa.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Nov\v cana naknada}
+	\begin{itemize}
+		\item Nezaposleno lice dolazi u Nacionalnu slu\v zbu za zapo\v sljavanje radi ostvarivanja prava na nov\v canu naknadu. 
+		\item Prvi korak je Prijava za ostvarivanja prava na nov\v canu naknadu.
+		\item Nakon toga odlazi kod upravnog referenta i obavlja se Kompletiranje dokumentacije.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Nov\v cana naknada}
+\begin{itemize}		
+		\item Zatim, pravno lice koje na osnovu zakonskih odredbi i prilo\v zene dokumentacije Dono\v si re\v senje o nov\v canoj naknadi.
+		\item Odluka se prosle\dj uje kod direktora na overu, \v cime se vr\v si Zaklju\v civanje re\v senja, i zatim u pisarnicu odakle se \v Salje po\v stom nezaposlenom licu.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Procena radne sposobnosti}
+	\begin{itemize}
+		\item Osoba, koja mo\v ze biti zaposlena ili nezaposlena, dolazi u Nacionalnu slu\v zbu za zapo\v sljavanje kako bi podnela zahtev za procenu radne sposobnosti nakon \v cega se formira komisija i vr\v si sam \v cin procene.
+		\item Prvo se dolazi da Podnese zahtev za procenu radne sposobnosti.
+		\item Onda podnosi potrebnu dokumentaciju.
+		\item Zatim se zakazuje sastanak sa komisijom.
+		\item Nakon sastanka sastavlja se re\v senje o radnoj sposobnosti osobe i ono se \v salje na ku\' cnu adresu. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Administracija sistema}
+	\begin{itemize}
+		\item Administracija sistema odnosi se na dodavanje novih zaposlenih u Nacionalnoj slu\v zbi u sistem, odnosno pravljenje novih naloga, kako bi mogli da mu pristupaju. 
+		\item Tako\dj e, podrazumeva brisanje korisnika iz sistema koji vi\v se ne rade u slu\v zbi. 
+		\item Jo\v s jedan postupak koji se uklju\v cuje u ovaj slu\v caj upotrebe, a mo\v zda i najva\v zniji, jeste pravljenje backup-a baze podataka.
+	\end{itemize}
+\end{frame}
+
+\section{Klase podataka}
+\begin{frame}{Klase podataka}
+	Analizom slu\v cajeva upotrebe, uo\v cene su slede\' ce grupe podataka:
+\end{frame}
+
+\subsection{Zaposleni u NSZ}
+\begin{frame}{Zaposleni u NSZ}
+	\begin{itemize}
+		\item \v salterski slu\v zbenik
+		\item savetnik
+		\item upravni referent
+		\item pravno lice
+		\item direktor
+	\end{itemize}
+
+\end{frame}
+	
+\subsection{Nezaposlena lica na evidenciji}
+\begin{frame}{Nezaposlena lica na evidenciji}
+	\begin{itemize}
+		\item  li\v cni podaci o nezaposlenom licu
+		\item podaci o prethodnim zaposlenjima nezaposlenog lica
+		\item podaci o javljanju
+		\item podaci o radnoj sposobnosti
+		\item podaci o nov\v canoj naknadi 
+		\item podaci o nalogu za online javljanje
+	\end{itemize}
+\end{frame}	
+	
+\subsection{Poslodavci}
+\begin{frame}{Poslodavci}
+		\begin{itemize}
+			\item podaci o kompaniji
+			\item podaci o oglasima i konkursima za poslove
+			\item podaci o potrebnim profilima ljudi
+			\item podaci o nalogu za online otvaranje oglasa
+		\end{itemize}
+	\end{frame}	
+
+\subsection{Zanimanja}
+\begin{frame}{Zanimanja}
+		\begin{itemize}
+			\item podaci o zanimanjima
+			\item podaci o stru\v cnoj spremi
+		\end{itemize}
+\end{frame}
+
+
+\section{Zaklju\v cak}
+\begin{frame}{Zaklju\v cak}
+	\begin{itemize}
+		\item Izrada ovog projekta je uklju\v cila modeliranje klju\v cnih delova sistema Nacionalne slu\v zbe za zapo\v sljavanje, ali ne i njihovu implementaciju. 
+		\item Unapre\dj enje postoje\' ceg sistema je dato u vidu usluga putem interneta. \item Dalje unapre\dj enje bi podrazumevalo pravljenje alternativa postoje\' cim slu\v cajevima upotrebe koji bi se obavljali putem interneta, kao \v sto su: Prijava na evidenciju, Redovno javljanje, i Prijava za nov\v canu naknadu.
+
+	\end{itemize}
+\end{frame}	
+
+\begin{frame}{Zaklju\v cak}
+\begin{itemize}	
+		\item Ovaj projekat se mo\v ze primeniti na bilo kakvu agenciju za zapo\v sljavanje.
+		\item U razgovoru sa zaposlenima Nacionalne slu\v zbe zaklju\v cili smo da prostora za unapre\dj enje (olak\v savanje posla zaposlenima, ali i poslodavcima i nezaposlenim licima u ostvarivanju svojih ciljeva) ima jo\v s, ali neki od njih izlaze iz zakonskih okvira zbog poverljivosti informacija, stoga se njima nismo bavili u ovom projektu.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	Pitanja?
+\end{frame}
+
+\begin{frame}
+	Hvala na pa\v znji!
+\end{frame}
+
+\end{document}
